@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Parallax視差與Anchors錨點</title>
+
+    <style>
+        body {
+            margin: 0;
+            /* 去除外邊界 */
+        }
+
+        nav {
+            /* 導覽列設定 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            padding: 5px;
+        }
+
+        .container {
+            /* 設定不同平台寬度 */
+            /* width: 1200px; */
+            /* 鎖死寬度 */
+            margin: 0 auto;
+            /* 自動變化寬度 */
+        }
+
+        nav .logo {
+            float: left;
+            /* 設定logo靠左浮動 */
+        }
+
+        nav .logo img {
+            height: 50px;
+            display: block;
+        }
+
+        h1 {
+            display: none;
+            /* 取消h的內容顯示 */
+        }
+
+        nav ul {
+            float: right;
+            /* 文字順序由右至左 */
+            list-style-type: none;
+            /* 去除ul符號樣式 */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            float: left;
+            /* 使超連結為靠右浮動 */
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            /* 去除padding上下內邊界顯示 */
+            text-decoration: none;
+            /* none去除超連結底線 */
+        }
+
+        .clearfix {
+            clear: both;
+            /* 清除浮動 */
+        }
+
+        #section_1 {
+            height: 900px;
+            background-image: url('https://images.pexels.com/photos/1268129/pexels-photo-1268129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #section_1 .title {
+            font-family: 'Liu Jian Mao Cao', cursive;
+         
+        }
+
+        #section_2 {
+            height: 900px;
+            background-image: url('https://images.pexels.com/photos/2622208/pexels-photo-2622208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #section_2 .title {
+            font-family: 'Fascinate Inline', cursive;
+            color: rgb(0, 68, 255);
+        }
+
+        #section_3 {
+            height: 900px;
+            background-image: url('https://images.pexels.com/photos/1395004/pexels-photo-1395004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        #section_3 .title {
+            font-family: 'Permanent Marker', cursive;
+            color: rgb(240, 88, 0);
+        }
+
+        .title {
+            padding: 30px;
+            width: 30%;
+            font-size: 50px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.63);
+            position: relative;
+            top: 50%;
+            left: 35%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/600px-Android_O_Preview_Logo.png"
+                    alt="Logo">
+                <h1>Logo</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="#section_1">主頁</a>
+                </li>
+                <li>
+                    <a href="#section_2">產品</a>
+                </li>
+                <li>
+                    <a href="#section_3">關於我們</a>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </nav>
+    <main>
+
+        <section id="section_1">
+            <div class="title">Hello!</div>
+        </section>
+        <section id="section_2">
+            <div class="title">Taiwan</div>
+        </section>
+        <section id="section_3">
+            <div class="title">Hello Taiwan!</div>
+        </section>
+
+    </main>
+</body>
+
+</html>
